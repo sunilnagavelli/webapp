@@ -3,8 +3,10 @@ pipeline {
     stages {
         stage('Initialize') {
             steps {
+                checkout scm
                 script {
                    echo "Hello"
+                    sh 'ls -l'
                 }
             }
         }
