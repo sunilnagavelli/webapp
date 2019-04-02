@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    tools {
-        maven 'Maven3'
-    }
     stages {
         stage('Initialize') {
             steps {
@@ -10,9 +7,7 @@ pipeline {
                 script {
                     sh '''
                         ls
-                        echo "PATH = ${PATH}"
-                        echo "M2_HOME = ${M2_HOME}"
-                        mvn clean package
+                        ${M2_HOME}/bin/mvn clean package
                         ls -l
                     '''
                 }
