@@ -7,6 +7,10 @@ pipeline {
                 script {
                    echo "Hello"
                     sh 'ls -l'
+                    sh '''
+                        mvn clean package
+                        ls -l
+                    '''
                 }
             }
         }
