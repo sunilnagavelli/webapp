@@ -1,5 +1,3 @@
-@Library("jenkinsgl@master") _
-
 pipeline {
     agent {
         any
